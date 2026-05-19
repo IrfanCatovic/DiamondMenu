@@ -24,6 +24,7 @@ export function FeaturedSection() {
               <Badge type={item.badge} className="absolute left-3 top-3 z-10" />
               <ProductPlaceholder
                 name={item.name}
+                image={item.image}
                 variant={
                   item.id.includes('africka') || item.id.includes('dupla')
                     ? 'shisha'
@@ -31,7 +32,7 @@ export function FeaturedSection() {
                       ? 'sweet'
                       : 'drink'
                 }
-                className="mb-3 h-24 w-full rounded-lg text-2xl"
+                className="mb-3 w-full text-2xl"
               />
               <h3 className="font-display text-lg font-semibold text-champagne">
                 {item.name}

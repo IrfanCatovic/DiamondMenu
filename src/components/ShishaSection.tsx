@@ -28,8 +28,9 @@ function ShishaHeroCard({ item }: { item: MenuItem }) {
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
         <ProductPlaceholder
           name={item.name}
+          image={item.image}
           variant="shisha"
-          className="h-28 w-full sm:h-32 sm:w-32 sm:shrink-0"
+          className="mx-auto w-full max-w-[220px] sm:mx-0 sm:w-44 sm:max-w-none sm:shrink-0"
         />
         <div className="flex-1">
           <p className="text-[10px] tracking-[0.25em] text-gold/70 uppercase">
@@ -60,8 +61,9 @@ function ShishaListCard({ item }: { item: MenuItem }) {
     <article className="glass-card flex items-center gap-4 p-4 transition-colors hover:border-gold/25">
       <ProductPlaceholder
         name={item.name}
+        image={item.image}
         variant="shisha"
-        className="h-14 w-14 shrink-0"
+        className="w-16 shrink-0"
       />
       <div className="min-w-0 flex-1">
         <h3 className="font-display text-lg font-medium text-champagne">

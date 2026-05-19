@@ -29,8 +29,9 @@ export function MenuCard({
     <>
       <ProductPlaceholder
         name={item.name}
+        image={item.image}
         variant="default"
-        className={variant === 'compact' ? 'h-12 w-12 text-sm' : 'h-16 w-16'}
+        className={variant === 'compact' ? 'w-14 text-sm' : 'w-16'}
       />
       <div className="min-w-0 flex-1">
         {badge ? <Badge type={badge} className="mb-2" /> : null}

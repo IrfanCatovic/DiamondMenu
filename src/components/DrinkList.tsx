@@ -16,8 +16,9 @@ function DrinkRow({ item }: { item: MenuItem }) {
     <>
       <ProductPlaceholder
         name={item.name}
+        image={item.image}
         variant="drink"
-        className="h-11 w-11 text-xs"
+        className="w-14 text-xs"
       />
       <div className="min-w-0 flex-1">
         <p className="font-medium text-champagne leading-tight">{item.name}</p>

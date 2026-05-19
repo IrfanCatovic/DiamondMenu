@@ -15,8 +15,9 @@ function SweetCard({ item }: { item: MenuItem }) {
     <article className="glass-card-warm flex gap-4 p-4 transition-colors hover:border-diamond-amber/40">
       <ProductPlaceholder
         name={item.name}
+        image={item.image}
         variant="sweet"
-        className="h-20 w-20 shrink-0 text-xl"
+        className="w-24 shrink-0 text-xl sm:w-28"
       />
       <div className="flex min-w-0 flex-1 flex-col justify-center">
         <h3 className="font-display text-lg font-medium text-champagne">
