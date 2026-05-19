@@ -1,0 +1,114 @@
+{
+  "currency": "RSD",
+  "categories": [
+    {
+      "id": "kafa-topli",
+      "name": "Kafa i topli napitci",
+      "items": [
+        { "id": "espresso", "name": "Espresso", "price": 120 },
+        { "id": "espresso-sa-mlekom", "name": "Espreso sa mlekom", "price": 120 },
+        { "id": "espresso-americano", "name": "Espreso Americano", "price": 120 },
+        { "id": "dupli-espresso", "name": "Dupli espreso", "price": 240 },
+        { "id": "latte-machiato", "name": "Latte Machiato", "price": 190 },
+        { "id": "kapucino", "name": "Kapućino", "price": 130 },
+        { "id": "kapucino-sa-slagom", "name": "Kapućino sa slagom", "price": 150 },
+        { "id": "ness-classic-strong", "name": "Ness Classic Strong", "price": 130 },
+        { "id": "ness-classic-strong-sa-slagom", "name": "Ness Classic Strong sa šlagom", "price": 150 },
+        { "id": "nes-3-u-1", "name": "Nes 3 u 1", "price": 100 },
+        { "id": "iced-coffee", "name": "Iced Coffee", "price": 190 },
+        { "id": "hladne-kafe", "name": "Hladne kafe", "price": 190 },
+        { "id": "caj-tea-dolceza", "name": "Čaj Tea Dolceza", "price": 150 },
+        { "id": "caj-milford", "name": "Čaj Milford", "price": 120 },
+        { "id": "topla-cokolada", "name": "Topla Čokolada", "price": 180 },
+        { "id": "topla-cokolada-sa-slagom", "name": "Topla Čokolada sa šlagom", "price": 190 }
+      ]
+    },
+    {
+      "id": "voda",
+      "name": "Voda",
+      "items": [
+        { "id": "rosa-033", "name": "Rosa 0,33", "price": 130 },
+        { "id": "aqua-viva-033", "name": "Aqua viva 0,33", "price": 120 },
+        { "id": "knjaz-milos-033", "name": "Knjaz Miloš 0.33", "price": 130 },
+        { "id": "knjaz-milos-025", "name": "Knjaz Miloš 0.25", "price": 120 },
+        { "id": "knjaz-milos-limun-033", "name": "Knjaz Miloš Limun 0.33", "price": 150 },
+        { "id": "romaquele-limunska-trava-033", "name": "Romaquele Limunska trava 0.33", "price": 180 }
+      ]
+    },
+    {
+      "id": "sokovi",
+      "name": "Sokovi",
+      "items": [
+        { "id": "bravo", "name": "Bravo", "price": 190 },
+        { "id": "cedevita", "name": "Cedevita", "price": 180 }
+      ]
+    },
+    {
+      "id": "gazirani",
+      "name": "Gazirani napitci",
+      "items": [
+        { "id": "koka-kola", "name": "Koka Kola", "price": 220 },
+        { "id": "fanta", "name": "Fanta", "price": 220 },
+        { "id": "sprajt", "name": "Sprajt", "price": 220 },
+        {
+          "id": "schwepps",
+          "name": "Schwepps",
+          "price": 220,
+          "description": "Biter lemon, Tangerina, Tonic"
+        },
+        { "id": "kokta", "name": "Kokta", "price": 180 },
+        { "id": "limona", "name": "Limona", "price": 180 },
+        { "id": "somersby", "name": "Somersby", "price": 220 },
+        { "id": "orangina", "name": "Orangina", "price": 240 }
+      ]
+    },
+    {
+      "id": "energetski",
+      "name": "Energetski napitci",
+      "items": [
+        { "id": "guarana", "name": "Guarana", "price": 190 },
+        { "id": "ultra-energis", "name": "Ultra Energis", "price": 210 },
+        { "id": "sinalco-energis", "name": "Sinalco Energis", "price": 210 },
+        { "id": "red-bull", "name": "Red Bull", "price": 350 }
+      ]
+    },
+    {
+      "id": "cedjeni",
+      "name": "Ceđeni sokovi i smuti",
+      "items": [
+        { "id": "cedjena-narandza", "name": "Ceđena Narandža", "price": 210 },
+        { "id": "cedjena-jabuka", "name": "Ceđena Jabuka", "price": 190 },
+        { "id": "cedjena-limonada", "name": "Ceđena Limonada", "price": 140 },
+        { "id": "cedjeni-nar", "name": "Ceđeni Nar", "price": 330 },
+        { "id": "cedjeni-grejp", "name": "Ceđeni Grejp", "price": 250 },
+        { "id": "atrium-fresh", "name": "Atrium Fresh", "price": 250 },
+        { "id": "smuti", "name": "Smuti", "price": 250 }
+      ]
+    },
+    {
+      "id": "slatki-kutak",
+      "name": "Slatki kutak",
+      "items": [
+        { "id": "waffel", "name": "Waffel", "price": "" },
+        { "id": "americke-palacinke", "name": "Američke palačinke", "price": "" },
+        { "id": "kolaci", "name": "Kolači", "price": 250 },
+        { "id": "biskotino", "name": "Biskotino", "price": 180 },
+        { "id": "frappe-milkshake", "name": "Frappe Milkshake", "price": 210 },
+        { "id": "plazma-sejk", "name": "Plazma Sejk", "price": "" },
+        { "id": "topla-cokolada-sa-plazmom", "name": "Topla Cokolada sa plazmom", "price": "" },
+        { "id": "vocna-salata", "name": "Voćna Salata", "price": 300 },
+        { "id": "banana-split", "name": "Banana Split", "price": 280 },
+        { "id": "sladoled", "name": "Sladoled", "price": 120 }
+      ]
+    },
+    {
+      "id": "nargile",
+      "name": "Nargile",
+      "items": [
+        { "id": "africka-kraljica", "name": "Afrička kraljica", "price": 600 },
+        { "id": "dupla-jabuka", "name": "Dupla jabuka", "price": 600 },
+        { "id": "ice-bombon", "name": "Ice bombon", "price": 600 }
+      ]
+    }
+  ]
+}
