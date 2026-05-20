@@ -87,12 +87,12 @@
       "id": "slatki-kutak",
       "name": "Slatki kutak",
       "items": [
-        { "id": "waffel", "name": "Waffel", "price": "" },
-        { "id": "americke-palacinke", "name": "Američke palačinke", "price": "" },
+        { "id": "waffel", "name": "Waffel", "price": 280 },
+        { "id": "americke-palacinke", "name": "Američke palačinke", "price": 280 },
         { "id": "kolaci", "name": "Kolači", "price": 250 },
         { "id": "biskotino", "name": "Biskotino", "price": 180 },
         { "id": "frappe-milkshake", "name": "Frappe Milkshake", "price": 210 },
-        { "id": "plazma-sejk", "name": "Plazma Sejk", "price": "" },
+        { "id": "plazma-sejk", "name": "Plazma Sejk", "price": 220 },
         { "id": "vocna-salata", "name": "Voćna Salata", "price": 300 },
         { "id": "sladoled", "name": "Sladoled", "price": 120 }
       ]
