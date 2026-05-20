@@ -10,7 +10,8 @@ type SweetSectionProps = {
 }
 
 function SweetCard({ item }: { item: MenuItem }) {
-  const price = formatPrice(item.price)
+  const price = formatPrice(item.price) 
+  //ovo znaci da necemo prikazati cenu ako je prazna, pocetna vrednost moze da bude funkcija koja vraca praznu vrednost
   return (
     <article className="glass-card-warm flex gap-4 p-4 transition-colors hover:border-diamond-amber/40">
       <ProductPlaceholder

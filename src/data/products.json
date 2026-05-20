@@ -16,7 +16,6 @@
         { "id": "ness-classic-strong-sa-slagom", "name": "Ness Classic Strong sa šlagom", "price": 150 },
         { "id": "nes-3-u-1", "name": "Nes 3 u 1", "price": 100 },
         { "id": "iced-coffee", "name": "Iced Coffee", "price": 190 },
-        { "id": "hladne-kafe", "name": "Hladne kafe", "price": 190 },
         { "id": "caj-tea-dolceza", "name": "Čaj Tea Dolceza", "price": 150 },
         { "id": "caj-milford", "name": "Čaj Milford", "price": 120 },
         { "id": "topla-cokolada", "name": "Topla Čokolada", "price": 180 },
@@ -81,7 +80,6 @@
         { "id": "cedjena-limonada", "name": "Ceđena Limonada", "price": 140 },
         { "id": "cedjeni-nar", "name": "Ceđeni Nar", "price": 330 },
         { "id": "cedjeni-grejp", "name": "Ceđeni Grejp", "price": 250 },
-        { "id": "atrium-fresh", "name": "Atrium Fresh", "price": 250 },
         { "id": "smuti", "name": "Smuti", "price": 250 }
       ]
     },
@@ -95,9 +93,7 @@
         { "id": "biskotino", "name": "Biskotino", "price": 180 },
         { "id": "frappe-milkshake", "name": "Frappe Milkshake", "price": 210 },
         { "id": "plazma-sejk", "name": "Plazma Sejk", "price": "" },
-        { "id": "topla-cokolada-sa-plazmom", "name": "Topla Cokolada sa plazmom", "price": "" },
         { "id": "vocna-salata", "name": "Voćna Salata", "price": 300 },
-        { "id": "banana-split", "name": "Banana Split", "price": 280 },
         { "id": "sladoled", "name": "Sladoled", "price": 120 }
       ]
     },

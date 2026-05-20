@@ -37,15 +37,12 @@ const OSTALO_ITEM_IDS = [
   'caj-tea-dolceza',
   'caj-milford',
   'topla-cokolada',
-  'topla-cokolada-sa-slagom',
 ]
 
 export const FEATURED_ITEMS: FeaturedMeta[] = [
   { id: 'africka-kraljica', badge: 'preporuka-kuce' },
   { id: 'dupla-jabuka', badge: 'popularno' },
   { id: 'red-bull', badge: 'popularno' },
-  { id: 'atrium-fresh', badge: 'fresh' },
-  { id: 'banana-split', badge: 'sweet' },
 ]
 
 export const SHISHA_HERO_ID = 'africka-kraljica'

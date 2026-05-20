@@ -9,7 +9,15 @@ type RawCategory = {
   items: MenuItem[]
 }
 
-const categories = productsData.categories as RawCategory[]
+function withDefaultImage(item: MenuItem): MenuItem {
+  if (item.image !== undefined && item.image !== '') return item
+  return { ...item, image: `/images/${item.id}.png` }
+}
+
+const categories: RawCategory[] = productsData.categories.map((cat) => ({
+  ...cat,
+  items: cat.items.map((item) => withDefaultImage(item as MenuItem)),
+})) as RawCategory[]
 
 export function getCategoryItems(categoryId: string): MenuItem[] {
   const category = categories.find((c) => c.id === categoryId)

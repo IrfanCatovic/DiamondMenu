@@ -28,9 +28,7 @@ export function FeaturedSection() {
                 variant={
                   item.id.includes('africka') || item.id.includes('dupla')
                     ? 'shisha'
-                    : item.id === 'banana-split'
-                      ? 'sweet'
-                      : 'drink'
+                    : 'drink'
                 }
                 className="mb-3 w-full text-2xl"
               />
