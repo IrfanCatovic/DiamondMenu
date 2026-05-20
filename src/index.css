@@ -3,18 +3,25 @@
 @tailwind utilities;
 
 :root {
-  --bg-deep: #0a0806;
-  --bg-brown: #1a120e;
-  --gold: #d4af37;
+  --bg-deep: #080705;
+  --bg-near-black: #050505;
+  --bg-brown: #15110c;
+  --gold: #d6b35a;
+  --gold-muted: #c9a24a;
   --amber: #e8a84a;
-  --glow-red: rgba(220, 80, 40, 0.35);
+  --glow-red: rgba(220, 80, 40, 0.28);
   --green-accent: #2d5a3d;
   --text-champagne: #f5ecd8;
+  --text-muted: #8f8f8f;
+  --border-gold: rgba(214, 179, 90, 0.18);
+  --card-surface: rgba(17, 17, 17, 0.94);
+  --gold-glow-soft: 0 0 28px rgba(214, 179, 90, 0.07);
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5.75rem;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -27,30 +34,83 @@
     @apply bg-deep font-body text-champagne antialiased;
     min-height: 100dvh;
     overflow-x: hidden;
+    background-color: var(--bg-near-black);
+    background-image: radial-gradient(
+      ellipse 120% 80% at 50% 0%,
+      var(--bg-deep) 0%,
+      var(--bg-near-black) 55%
+    );
   }
 }
 
 @layer components {
   .glass-card {
-    @apply rounded-2xl border border-white/10 bg-white/[0.04] shadow-card backdrop-blur-md;
+    @apply rounded-2xl border shadow-card backdrop-blur-md;
+    border-color: var(--border-gold);
+    background: var(--card-surface);
+    box-shadow:
+      0 4px 24px rgba(0, 0, 0, 0.45),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
   }
 
   .glass-card-warm {
-    @apply glass-card shadow-[0_4px_28px_rgba(232,168,74,0.12)];
-    border-color: rgba(232, 168, 74, 0.2);
+    @apply glass-card;
+    border-color: rgba(232, 168, 74, 0.22);
+    box-shadow:
+      0 4px 28px rgba(232, 168, 74, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
   }
 
   .glass-card-premium {
-    @apply glass-card shadow-gold;
-    border-color: rgba(212, 175, 55, 0.25);
+    @apply glass-card;
+    border-color: rgba(214, 179, 90, 0.22);
+    box-shadow:
+      0 4px 32px rgba(0, 0, 0, 0.5),
+      0 0 36px rgba(214, 179, 90, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
   }
 
   .section-title {
-    @apply font-display text-xl font-semibold tracking-[0.2em] text-gold uppercase;
+    @apply font-display text-base font-semibold text-gold uppercase sm:text-lg;
+    letter-spacing: 0.22em;
+    text-wrap: balance;
   }
 
   .section-scroll-margin {
-    scroll-margin-top: 4.5rem;
+    scroll-margin-top: 5.75rem;
+  }
+
+  /** Premium list row — DrinkList, MenuCard, Shisha list */
+  .menu-item-card {
+    border-radius: 1rem;
+    border: 1px solid var(--border-gold);
+    background: var(--card-surface);
+    box-shadow:
+      0 4px 20px rgba(0, 0, 0, 0.35),
+      inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .menu-item-card:hover {
+    border-color: rgba(214, 179, 90, 0.32);
+    box-shadow:
+      var(--gold-glow-soft),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .menu-item-card:active {
+    border-color: rgba(214, 179, 90, 0.38);
+  }
+
+  /** Fixed column for prices on list rows */
+  .menu-item-price {
+    min-width: 6.75rem;
+    padding-left: 0.5rem;
+    padding-right: 0.375rem;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
   }
 
   .led-line {
@@ -58,15 +118,15 @@
     background: linear-gradient(
       90deg,
       transparent 0%,
-      rgba(212, 175, 55, 0.15) 20%,
-      rgba(220, 90, 50, 0.35) 50%,
-      rgba(212, 175, 55, 0.15) 80%,
+      rgba(214, 179, 90, 0.14) 20%,
+      rgba(220, 90, 50, 0.28) 50%,
+      rgba(214, 179, 90, 0.14) 80%,
       transparent 100%
     );
   }
 
   .text-gold-gradient {
-    background: linear-gradient(180deg, #f0d78c 0%, #d4af37 50%, #a8862a 100%);
+    background: linear-gradient(180deg, #f2e0a8 0%, #d6b35a 50%, #a88a3d 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

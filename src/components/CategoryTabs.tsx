@@ -22,7 +22,7 @@ function HookahIcon({ active }: { active: boolean }) {
   const color = active ? 'text-gold' : 'text-champagne/45'
   return (
     <svg
-      className={`h-[26px] w-[26px] shrink-0 ${color}`}
+      className={`h-[30px] w-[30px] shrink-0 ${color}`}
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -49,7 +49,7 @@ function TabIcon({ id, active }: TabIconProps) {
 
   return (
     <span
-      className={`material-symbols-outlined text-[26px] leading-none transition-colors ${
+      className={`material-symbols-outlined text-[28px] leading-none transition-colors ${
         active ? 'filled text-gold' : 'text-champagne/45'
       }`}
       aria-hidden
@@ -62,38 +62,38 @@ function TabIcon({ id, active }: TabIconProps) {
 export function CategoryTabs({ activeId, onSelect }: CategoryTabsProps) {
   return (
     <nav
-      className="sticky top-0 z-40 border-b border-white/5 bg-deep/95 backdrop-blur-lg"
+      className="sticky top-0 z-40 border-b border-[rgba(214,179,90,0.12)] bg-[#080705]/90 backdrop-blur-xl supports-[backdrop-filter]:bg-[#080705]/78"
       aria-label="Kategorije menija"
     >
-      <div className="mx-auto w-full max-w-lg px-2 py-3">
-        <ul className="grid grid-cols-5 items-stretch justify-items-center gap-0.5">
+      <div className="hide-scrollbar mx-auto w-full max-w-lg overflow-x-auto">
+        <ul className="flex min-w-full justify-between gap-0.5 px-2 py-3.5 sm:gap-1 sm:px-3">
           {NAV_TABS.map((tab) => {
             const isActive = tab.id === activeId
             return (
-              <li key={tab.id} className="flex w-full justify-center">
+              <li key={tab.id} className="flex min-w-0 flex-1 justify-center">
                 <button
                   type="button"
                   onClick={() => onSelect(tab.id)}
-                  className={`group flex w-full max-w-[4.5rem] flex-col items-center justify-center gap-1 rounded-xl px-1 py-2 text-center transition-all sm:max-w-none sm:px-2 ${
+                  className={`group flex w-full max-w-[5.25rem] flex-col items-center justify-center gap-1 rounded-xl px-0.5 py-1.5 text-center transition-all sm:max-w-none sm:px-1 ${
                     isActive
-                      ? 'text-gold'
-                      : 'text-champagne/50 hover:text-champagne/85'
+                      ? 'text-gold [text-shadow:0_0_20px_rgba(214,179,90,0.22)]'
+                      : 'text-champagne/50 hover:text-champagne/88'
                   }`}
                   aria-current={isActive ? 'true' : undefined}
                 >
                   <TabIcon id={tab.id} active={isActive} />
                   <span
-                    className={`w-full text-center text-[9px] font-medium leading-tight tracking-wide sm:text-[11px] ${
+                    className={`line-clamp-2 min-h-[2.4em] w-full px-0.5 text-center text-[10px] font-semibold leading-tight tracking-wide sm:text-[11px] ${
                       isActive ? 'text-gold' : ''
                     }`}
                   >
                     {tab.label}
                   </span>
                   <span
-                    className={`mt-0.5 h-0.5 w-8 rounded-full transition-all ${
+                    className={`h-[3px] w-9 shrink-0 rounded-full transition-all ${
                       isActive
-                        ? 'bg-gold shadow-[0_0_10px_rgba(212,175,55,0.65)]'
-                        : 'bg-transparent group-hover:bg-white/10'
+                        ? 'bg-gold shadow-[0_0_12px_rgba(214,179,90,0.32)]'
+                        : 'bg-transparent group-hover:bg-white/12'
                     }`}
                   />
                 </button>

@@ -2,7 +2,7 @@ import { FOOTER_CONFIG } from '../data/menuConfig'
 
 export function Footer() {
   return (
-    <footer className="relative mt-8 border-t border-white/10 px-4 py-10">
+    <footer className="relative mt-10 border-t border-[rgba(214,179,90,0.1)] px-4 py-10 sm:mt-12">
       <div className="led-line mb-8 opacity-40" aria-hidden />
       <div className="mx-auto grid max-w-lg gap-8 text-center sm:grid-cols-3 sm:text-left">
         <div>

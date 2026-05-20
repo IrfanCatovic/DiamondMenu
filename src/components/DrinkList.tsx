@@ -18,34 +18,42 @@ function DrinkRow({ item }: { item: MenuItem }) {
         name={item.name}
         image={item.image}
         variant="drink"
-        className="w-14 text-xs"
+        className="h-[60px] w-[60px] text-xs sm:h-16 sm:w-16"
       />
-      <div className="min-w-0 flex-1">
-        <p className="font-medium text-champagne leading-tight">{item.name}</p>
+      <div className="min-w-0 flex-1 px-1">
+        <p className="text-[15px] font-semibold leading-snug tracking-tight text-champagne sm:text-base">
+          {item.name}
+        </p>
         {item.description ? (
-          <p className="mt-0.5 text-xs text-champagne/50">{item.description}</p>
+          <p className="mt-1 text-[13px] leading-snug text-muted sm:text-sm">
+            {item.description}
+          </p>
         ) : null}
       </div>
       {price ? (
-        <p className="shrink-0 font-semibold text-gold text-sm">{price}</p>
+        <p className="menu-item-price shrink-0 self-center text-[0.9375rem] font-semibold tabular-nums text-gold sm:text-base">
+          {price}
+        </p>
       ) : (
-        <span className="shrink-0 w-10" aria-hidden />
+        <span
+          className="menu-item-price shrink-0 self-center"
+          aria-hidden
+        />
       )}
     </>
   )
 
+  const rowClass =
+    'menu-item-card flex min-h-[4.5rem] items-center gap-3 px-4 py-3.5 sm:gap-4 sm:px-5 sm:py-4'
+
   if (reducedMotion) {
-    return (
-      <article className="glass-card flex items-center gap-3 px-3 py-2.5">
-        {inner}
-      </article>
-    )
+    return <article className={rowClass}>{inner}</article>
   }
 
   return (
     <motion.article
-      className="glass-card flex items-center gap-3 px-3 py-2.5 transition-colors hover:border-gold/25"
-      whileTap={{ scale: 0.99 }}
+      className={rowClass}
+      whileTap={{ scale: 0.992 }}
     >
       {inner}
     </motion.article>
@@ -54,7 +62,7 @@ function DrinkRow({ item }: { item: MenuItem }) {
 
 export function DrinkList({ items }: DrinkListProps) {
   return (
-    <ul className="flex flex-col gap-2">
+    <ul className="flex flex-col gap-3">
       {items.map((item) => (
         <li key={item.id}>
           <DrinkRow item={item} />

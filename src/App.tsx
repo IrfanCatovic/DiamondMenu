@@ -14,7 +14,7 @@ import { useActiveSection } from './hooks/useActiveSection'
 const SECTION_IDS = NAV_TABS.map((t) => t.sectionId)
 
 function App() {
-  const activeId = useActiveSection(SECTION_IDS)
+  const [activeId, setActiveSection] = useActiveSection(SECTION_IDS)
   const sections = getMenuSections()
 
   const shishaSection = sections.find((s) => s.id === 'shisha')
@@ -24,13 +24,14 @@ function App() {
   const ostaloSection = sections.find((s) => s.id === 'ostalo')
 
   const handleTabSelect = useCallback((id: NavId) => {
+    setActiveSection(id)
     const el = document.getElementById(id)
     if (!el) return
     const nav = document.querySelector('nav[aria-label="Kategorije menija"]')
-    const navHeight = nav?.getBoundingClientRect().height ?? 56
-    const top = el.getBoundingClientRect().top + window.scrollY - navHeight - 8
+    const navHeight = nav?.getBoundingClientRect().height ?? 72
+    const top = el.getBoundingClientRect().top + window.scrollY - navHeight - 12
     window.scrollTo({ top, behavior: 'smooth' })
-  }, [])
+  }, [setActiveSection])
 
   return (
     <div className="relative min-h-dvh">

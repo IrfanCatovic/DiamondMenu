@@ -20,10 +20,15 @@ export function MenuCard({
   const reducedMotion = useReducedMotion()
   const price = formatPrice(item.price)
 
+  const thumbClass =
+    variant === 'compact'
+      ? 'h-[60px] w-[60px] text-sm sm:h-16 sm:w-16'
+      : 'h-[60px] w-[60px] sm:h-16 sm:w-16'
+
   const cardClass =
     variant === 'compact'
-      ? 'glass-card flex items-center gap-3 p-3'
-      : 'glass-card flex gap-4 p-4'
+      ? 'menu-item-card flex min-h-[4.5rem] items-center gap-3 px-4 py-3.5 sm:gap-4 sm:px-5 sm:py-4'
+      : 'menu-item-card flex min-h-[4.75rem] items-center gap-4 px-5 py-4 sm:py-5'
 
   const content = (
     <>
@@ -31,19 +36,25 @@ export function MenuCard({
         name={item.name}
         image={item.image}
         variant="default"
-        className={variant === 'compact' ? 'w-14 text-sm' : 'w-16'}
+        className={thumbClass}
       />
-      <div className="min-w-0 flex-1">
+      <div className="min-w-0 flex-1 px-1">
         {badge ? <Badge type={badge} className="mb-2" /> : null}
-        <h3 className="font-medium text-champagne">{item.name}</h3>
+        <h3 className="text-[15px] font-semibold leading-snug tracking-tight text-champagne sm:text-base">
+          {item.name}
+        </h3>
         {item.description ? (
-          <p className="mt-1 text-sm text-champagne/55">{item.description}</p>
+          <p className="mt-1 text-[13px] leading-snug text-muted sm:text-sm">
+            {item.description}
+          </p>
         ) : null}
       </div>
       {price ? (
-        <p className="shrink-0 self-center font-semibold text-gold">{price}</p>
+        <p className="menu-item-price shrink-0 self-center text-[0.9375rem] font-semibold tabular-nums text-gold sm:text-base">
+          {price}
+        </p>
       ) : (
-        <span className="shrink-0 self-center w-12" aria-hidden />
+        <span className="menu-item-price shrink-0 self-center" aria-hidden />
       )}
     </>
   )
@@ -53,10 +64,7 @@ export function MenuCard({
   }
 
   return (
-    <motion.article
-      className={`${cardClass} transition-colors hover:border-gold/30`}
-      whileTap={{ scale: 0.98 }}
-    >
+    <motion.article className={cardClass} whileTap={{ scale: 0.992 }}>
       {content}
     </motion.article>
   )

@@ -19,10 +19,10 @@ export function ProductPlaceholder({
 }: ProductPlaceholderProps) {
   const initial = name.charAt(0).toUpperCase()
   const borderTint = {
-    default: 'border-white/10',
-    shisha: 'border-gold/25',
-    sweet: 'border-diamond-amber/30',
-    drink: 'border-green-accent/25',
+    default: 'border-[rgba(214,179,90,0.22)]',
+    shisha: 'border-gold/30',
+    sweet: 'border-diamond-amber/28',
+    drink: 'border-[rgba(214,179,90,0.18)]',
   }[variant]
 
   const fallbackBg = {
@@ -38,7 +38,7 @@ export function ProductPlaceholder({
 
   return (
     <div
-      className={`relative aspect-square shrink-0 overflow-hidden rounded-xl border bg-deep/40 ${borderTint} ${className}`}
+      className={`product-thumb-frame relative aspect-square shrink-0 overflow-hidden rounded-2xl border bg-deep/50 shadow-[inset_0_0_0_1px_rgba(214,179,90,0.08),0_2px_12px_rgba(0,0,0,0.35)] ${borderTint} ${className}`}
     >
       {image ? (
         <img
@@ -46,7 +46,7 @@ export function ProductPlaceholder({
           alt={name}
           width={300}
           height={300}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-center brightness-[1.12] contrast-[1.05]"
           loading="lazy"
           decoding="async"
         />

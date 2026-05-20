@@ -1,36 +1,53 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import type { NavId } from '../data/types'
 import { NAV_TABS } from '../data/menuConfig'
 
-export function useActiveSection(sectionIds: string[]) {
+const NAV_SELECTOR = 'nav[aria-label="Kategorije menija"]'
+
+/**
+ * Scroll spy: aktivna je poslednja sekcija (redosled u meniju) čiji je vrh
+ * iznad ili na liniji odmaka ispod sticky navigacije. Pouzdanije od
+ * IntersectionObserver + intersectionRatio na vrlo visokim sekcijama (npr. Pića).
+ */
+export function useActiveSection(_sectionIds: string[]) {
   const [activeId, setActiveId] = useState<NavId>(NAV_TABS[0].id)
 
+  const computeActive = useCallback(() => {
+    const nav = document.querySelector(NAV_SELECTOR)
+    const navHeight = nav?.getBoundingClientRect().height ?? 72
+    const focusY = window.scrollY + navHeight + 20
+
+    let next: NavId = NAV_TABS[0].id
+    for (const tab of NAV_TABS) {
+      const el = document.getElementById(tab.sectionId)
+      if (!el) continue
+      const top = el.getBoundingClientRect().top + window.scrollY
+      if (top <= focusY) {
+        next = tab.id
+      }
+    }
+    setActiveId((prev) => (prev === next ? prev : next))
+  }, [])
+
   useEffect(() => {
-    const elements = sectionIds
-      .map((id) => document.getElementById(id))
-      .filter((el): el is HTMLElement => el !== null)
+    let ticking = false
+    const onScrollOrResize = () => {
+      if (ticking) return
+      ticking = true
+      requestAnimationFrame(() => {
+        ticking = false
+        computeActive()
+      })
+    }
 
-    if (elements.length === 0) return
+    computeActive()
+    window.addEventListener('scroll', onScrollOrResize, { passive: true })
+    window.addEventListener('resize', onScrollOrResize)
+    return () => {
+      window.removeEventListener('scroll', onScrollOrResize)
+      window.removeEventListener('resize', onScrollOrResize)
+    }
+  }, [computeActive])
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
-
-        if (visible[0]?.target.id) {
-          setActiveId(visible[0].target.id as NavId)
-        }
-      },
-      {
-        rootMargin: '-20% 0px -55% 0px',
-        threshold: [0, 0.1, 0.25, 0.5],
-      },
-    )
-
-    elements.forEach((el) => observer.observe(el))
-    return () => observer.disconnect()
-  }, [sectionIds])
-
-  return activeId
+  return [activeId, setActiveId] as const
 }
