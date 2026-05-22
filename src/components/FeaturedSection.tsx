@@ -26,7 +26,9 @@ export function FeaturedSection() {
                 name={item.name}
                 image={item.image}
                 variant={
-                  item.id.includes('africka') || item.id.includes('dupla')
+                  item.id.includes('africka') ||
+                  item.id.includes('dupla') ||
+                  item.id.includes('nargila')
                     ? 'shisha'
                     : 'drink'
                 }

@@ -15,6 +15,7 @@
         { "id": "ness-classic-strong", "name": "Ness Classic Strong", "price": 130 },
         { "id": "ness-classic-strong-sa-slagom", "name": "Ness Classic Strong sa šlagom", "price": 150 },
         { "id": "nes-3-u-1", "name": "Nes 3 u 1", "price": 100 },
+        { "id": "turska-kafa", "name": "Turska kafa", "price": 100 },
         { "id": "iced-coffee", "name": "Iced Coffee", "price": 190 },
         { "id": "caj-tea-dolceza", "name": "Čaj Tea Dolceza", "price": 150 },
         { "id": "caj-milford", "name": "Čaj Milford", "price": 120 },
@@ -78,9 +79,39 @@
         { "id": "cedjena-narandza", "name": "Ceđena Narandža", "price": 210 },
         { "id": "cedjena-jabuka", "name": "Ceđena Jabuka", "price": 190 },
         { "id": "cedjena-limonada", "name": "Ceđena Limonada", "price": 140 },
+        { "id": "limunata-na-tocenje", "name": "Limunata na točenje", "price": 160 },
+        { "id": "borovnica", "name": "Borovnica", "price": 160 },
         { "id": "cedjeni-nar", "name": "Ceđeni Nar", "price": 330 },
         { "id": "cedjeni-grejp", "name": "Ceđeni Grejp", "price": 250 },
         { "id": "smuti", "name": "Smuti", "price": 250 }
+      ]
+    },
+    {
+      "id": "kokteli",
+      "name": "Kokteli",
+      "items": [
+        {
+          "id": "raspberry-redbull",
+          "name": "Raspberry Redbull",
+          "price": 180,
+          "description": "Osvežavajući mix maline i Red Bulla"
+        },
+        {
+          "id": "blue-poweraid-mocktail",
+          "name": "Blue PowerAid Mocktail",
+          "price": 180,
+          "image": "/images/Blue-PowerAid-Mocktail.png",
+          "description": "Plavi mocktail sa PowerAid notom"
+        }
+      ]
+    },
+    {
+      "id": "dorucak",
+      "name": "Doručak",
+      "items": [
+        { "id": "turski-dorucak", "name": "Turski doručak", "price": 300 },
+        { "id": "omlet", "name": "Omlet", "price": 300 },
+        { "id": "topli-sendvic", "name": "Topli sendvič", "price": 300 }
       ]
     },
     {
@@ -89,6 +120,16 @@
       "items": [
         { "id": "waffel", "name": "Waffel", "price": 280 },
         { "id": "americke-palacinke", "name": "Američke palačinke", "price": 280 },
+        {
+          "id": "palacinke-nutela-plazma",
+          "name": "Palačinke Nutela Plazma",
+          "price": 300
+        },
+        {
+          "id": "palacinke-eurokrem-plazma",
+          "name": "Palačinke Eurokrem Plazma",
+          "price": 300
+        },
         { "id": "kolaci", "name": "Kolači", "price": 250 },
         { "id": "biskotino", "name": "Biskotino", "price": 180 },
         { "id": "frappe-milkshake", "name": "Frappe Milkshake", "price": 210 },
@@ -101,9 +142,10 @@
       "id": "nargile",
       "name": "Nargile",
       "items": [
-        { "id": "africka-kraljica", "name": "Afrička kraljica", "price": 600 },
-        { "id": "dupla-jabuka", "name": "Dupla jabuka", "price": 600 },
-        { "id": "ice-bombon", "name": "Ice bombon", "price": 600 }
+        { "id": "africka-kraljica", "name": "Afrička kraljica", "price": 500 },
+        { "id": "dupla-jabuka", "name": "Dupla jabuka", "price": 500 },
+        { "id": "ice-bombon", "name": "Ice bombon", "price": 500 },
+        { "id": "nargila-pistaci", "name": "Nargila pistaci", "price": 500 }
       ]
     }
   ]

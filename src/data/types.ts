@@ -6,7 +6,14 @@ export type MenuItem = {
   image?: string
 }
 
-export type NavId = 'shisha' | 'pica' | 'kafe' | 'slatki-kutak' | 'ostalo'
+export type NavId =
+  | 'shisha'
+  | 'pica'
+  | 'kafe'
+  | 'dorucak'
+  | 'slatki-kutak'
+  | 'kokteli'
+  | 'ostalo'
 
 export type BadgeType =
   | 'popularno'

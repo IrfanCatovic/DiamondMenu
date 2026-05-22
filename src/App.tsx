@@ -6,6 +6,8 @@ import { Footer } from './components/Footer'
 import { Hero } from './components/Hero'
 import { MenuSection } from './components/MenuSection'
 import { ShishaSection } from './components/ShishaSection'
+import { BreakfastSection } from './components/BreakfastSection'
+import { CocktailsSection } from './components/CocktailsSection'
 import { SweetSection } from './components/SweetSection'
 import { NAV_TABS, getMenuSections } from './data/menuConfig'
 import type { NavId } from './data/types'
@@ -20,7 +22,9 @@ function App() {
   const shishaSection = sections.find((s) => s.id === 'shisha')
   const picaSection = sections.find((s) => s.id === 'pica')
   const kafeSection = sections.find((s) => s.id === 'kafe')
+  const dorucakSection = sections.find((s) => s.id === 'dorucak')
   const slatkiSection = sections.find((s) => s.id === 'slatki-kutak')
+  const kokteliSection = sections.find((s) => s.id === 'kokteli')
   const ostaloSection = sections.find((s) => s.id === 'ostalo')
 
   const handleTabSelect = useCallback((id: NavId) => {
@@ -44,7 +48,13 @@ function App() {
           {shishaSection ? <ShishaSection items={shishaSection.items} /> : null}
           {picaSection ? <MenuSection section={picaSection} /> : null}
           {kafeSection ? <MenuSection section={kafeSection} /> : null}
+          {dorucakSection ? (
+            <BreakfastSection items={dorucakSection.items} />
+          ) : null}
           {slatkiSection ? <SweetSection items={slatkiSection.items} /> : null}
+          {kokteliSection ? (
+            <CocktailsSection items={kokteliSection.items} />
+          ) : null}
           {ostaloSection ? <MenuSection section={ostaloSection} /> : null}
         </main>
         <Footer />

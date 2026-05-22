@@ -14,7 +14,9 @@ export const NAV_TABS: NavTab[] = [
   { id: 'shisha', label: 'Shisha', sectionId: 'shisha' },
   { id: 'pica', label: 'Pića', sectionId: 'pica' },
   { id: 'kafe', label: 'Kafe', sectionId: 'kafe' },
-  { id: 'slatki-kutak', label: 'Slatki kutak', sectionId: 'slatki-kutak' },
+  { id: 'dorucak', label: 'Doručak', sectionId: 'dorucak' },
+  { id: 'slatki-kutak', label: 'Slatki', sectionId: 'slatki-kutak' },
+  { id: 'kokteli', label: 'Kokteli', sectionId: 'kokteli' },
   { id: 'ostalo', label: 'Ostalo', sectionId: 'ostalo' },
 ]
 
@@ -29,8 +31,8 @@ const KAFE_ITEM_IDS = [
   'ness-classic-strong',
   'ness-classic-strong-sa-slagom',
   'nes-3-u-1',
+  'turska-kafa',
   'iced-coffee',
-  'hladne-kafe',
 ]
 
 const OSTALO_ITEM_IDS = [
@@ -41,7 +43,8 @@ const OSTALO_ITEM_IDS = [
 
 export const FEATURED_ITEMS: FeaturedMeta[] = [
   { id: 'africka-kraljica', badge: 'preporuka-kuce' },
-  { id: 'dupla-jabuka', badge: 'popularno' },
+  { id: 'nargila-pistaci', badge: 'premium' },
+  { id: 'raspberry-redbull', badge: 'fresh' },
   { id: 'red-bull', badge: 'popularno' },
 ]
 
@@ -51,6 +54,7 @@ export const SHISHA_FLAVORS: Record<string, FlavorTag[]> = {
   'africka-kraljica': ['fruity', 'sweet'],
   'dupla-jabuka': ['fruity', 'sweet'],
   'ice-bombon': ['fresh', 'sweet'],
+  'nargila-pistaci': ['creamy', 'sweet'],
 }
 
 export const BADGE_LABELS: Record<BadgeType, string> = {
@@ -83,6 +87,8 @@ export function getMenuSections(): MenuSectionData[] {
   const ostaloItems = getItemsByIds(OSTALO_ITEM_IDS)
   const shishaItems = getCategoryItems('nargile')
   const slatkiItems = getCategoryItems('slatki-kutak')
+  const dorucakItems = getCategoryItems('dorucak')
+  const kokteliItems = getCategoryItems('kokteli')
 
   const picaSubgroups = DRINK_SUBGROUPS.map((sg) => ({
     title: sg.title,
@@ -107,9 +113,19 @@ export function getMenuSections(): MenuSectionData[] {
       items: kafeItems,
     },
     {
+      id: 'dorucak',
+      title: 'Doručak',
+      items: dorucakItems,
+    },
+    {
       id: 'slatki-kutak',
       title: 'Slatki kutak',
       items: slatkiItems,
+    },
+    {
+      id: 'kokteli',
+      title: 'Kokteli',
+      items: kokteliItems,
     },
     {
       id: 'ostalo',
