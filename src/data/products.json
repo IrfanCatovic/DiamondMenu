@@ -78,8 +78,18 @@
       "items": [
         { "id": "cedjena-narandza", "name": "Ceđena Narandža", "price": 210 },
         { "id": "cedjena-jabuka", "name": "Ceđena Jabuka", "price": 190 },
-        { "id": "cedjena-limonada", "name": "Ceđena Limonada", "price": 140 },
-        { "id": "limunata-na-tocenje", "name": "Limunata na točenje", "price": 160 },
+        {
+          "id": "cedjena-limunada",
+          "name": "Ceđena Limunada",
+          "price": 140,
+          "image": "/images/cedjena-limunada.png"
+        },
+        {
+          "id": "limunada-na-tocenje",
+          "name": "Limunada na točenje",
+          "price": 160,
+          "image": "/images/limunada-na-tocenje.png"
+        },
         { "id": "borovnica", "name": "Borovnica", "price": 160 },
         { "id": "cedjeni-nar", "name": "Ceđeni Nar", "price": 330 },
         { "id": "cedjeni-grejp", "name": "Ceđeni Grejp", "price": 250 },
