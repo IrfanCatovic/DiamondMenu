@@ -133,12 +133,12 @@
         {
           "id": "palacinke-nutela-plazma",
           "name": "Palačinke Nutela Plazma",
-          "price": 300
+          "price": 250
         },
         {
           "id": "palacinke-eurokrem-plazma",
           "name": "Palačinke Eurokrem Plazma",
-          "price": 300
+          "price": 200
         },
         { "id": "kolaci", "name": "Kolači", "price": 250 },
         { "id": "biskotino", "name": "Biskotino", "price": 180 },
@@ -155,7 +155,16 @@
         { "id": "africka-kraljica", "name": "Afrička kraljica", "price": 500 },
         { "id": "dupla-jabuka", "name": "Dupla jabuka", "price": 500 },
         { "id": "ice-bombon", "name": "Ice bombon", "price": 500 },
-        { "id": "nargila-pistaci", "name": "Nargila pistaci", "price": 500 }
+        { "id": "nargila-lubenica", "name": "Nargila lubenica", "price": 500 },
+        { "id": "nargila-pistaci", "name": "Nargila pistaci", "price": 500 },
+        { "id": "nargila-borovnica", "name": "Nargila borovnica", "price": 500 },
+        { "id": "nargila-breskva", "name": "Nargila breskva", "price": 500 },
+        { "id": "nargila-grozdjementa", "name": "Nargila grozdje menta", "price": 500 },
+        { "id": "nargila-icebombon", "name": "Nargila ice bombon", "price": 500 },
+        { "id": "nargila-swissbombon", "name": "Nargila swiss bombon", "price": 500 },
+        { "id": "nargila-cocacola", "name": "Nargila cocacola", "price": 500 },
+        { "id": "nargila-cherry", "name": "Nargila cherry", "price": 500 },
+        { "id": "nargila-bazooka", "name": "Nargila bazooka", "price": 600 }
       ]
     }
   ]
