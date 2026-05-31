@@ -141,9 +141,9 @@
           "price": 200
         },
         { "id": "kolaci", "name": "Kolači", "price": 250 },
-        { "id": "biskotino", "name": "Biskotino", "price": 180 },
-        { "id": "frappe-milkshake", "name": "Frappe Milkshake", "price": 210 },
-        { "id": "plazma-sejk", "name": "Plazma Sejk", "price": 220 },
+        { "id": "biskotino", "name": "Biskotino", "price": 230 },
+        { "id": "frappe-milkshake", "name": "Frappe Milkshake", "price": 230 },
+        { "id": "plazma-sejk", "name": "Plazma Sejk", "price": 230 },
         { "id": "vocna-salata", "name": "Voćna Salata", "price": 300 },
         { "id": "sladoled", "name": "Sladoled", "price": 120 }
       ]
