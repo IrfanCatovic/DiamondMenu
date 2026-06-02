@@ -169,7 +169,7 @@
         { "id": "black-nana", "name": "Black nana", "price": 500 },
         { "id": "premium-led-voce", "name": "Premium led voce", "price": 1300 },
         { "id": "premium-led", "name": "Premium led", "price": 700 },
-        { "id": "diamong-premium", "name": "Diamond premium", "price": 500 },
+        { "id": "diamond-premium", "name": "Diamond premium", "price": 500 },
         { "id": "nargila-bazooka", "name": "Nargila bazooka", "price": 600 }
       ]
     }
