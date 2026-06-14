@@ -143,6 +143,13 @@
         { "id": "kolaci", "name": "Kolači", "price": 250 },
         { "id": "biskotino", "name": "Biskotino", "price": 230 },
         { "id": "frappe-milkshake", "name": "Frappe Milkshake", "price": 230 },
+        { "id": "frape", "name": "Frape", "price": 180 },
+        { "id": "frape-jagoda", "name": "Frape jagoda", "price": 180 },
+        { "id": "frape-vanila", "name": "Frape vanila", "price": 180 },
+        { "id": "frape-banana", "name": "Frape banana", "price": 180 },
+        { "id": "frape-sumsko-voce", "name": "Frape šumsko voće", "price": 180 },
+        { "id": "frape-cokolada", "name": "Frape čokolada", "price": 180 },
+        { "id": "frape-dubai-cokolada", "name": "Frape Dubai čokolada", "price": 180 },
         { "id": "plazma-sejk", "name": "Plazma Sejk", "price": 230 },
         { "id": "vocna-salata", "name": "Voćna Salata", "price": 300 },
         { "id": "sladoled", "name": "Sladoled", "price": 120 }
