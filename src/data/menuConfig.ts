@@ -14,7 +14,6 @@ export const NAV_TABS: NavTab[] = [
   { id: 'shisha', label: 'Shisha', sectionId: 'shisha' },
   { id: 'pica', label: 'Pića', sectionId: 'pica' },
   { id: 'kafe', label: 'Kafe', sectionId: 'kafe' },
-  { id: 'dorucak', label: 'Doručak', sectionId: 'dorucak' },
   { id: 'slatki-kutak', label: 'Slatki', sectionId: 'slatki-kutak' },
   { id: 'kokteli', label: 'Kokteli', sectionId: 'kokteli' },
   { id: 'ostalo', label: 'Ostalo', sectionId: 'ostalo' },
@@ -87,7 +86,6 @@ export function getMenuSections(): MenuSectionData[] {
   const ostaloItems = getItemsByIds(OSTALO_ITEM_IDS)
   const shishaItems = getCategoryItems('nargile')
   const slatkiItems = getCategoryItems('slatki-kutak')
-  const dorucakItems = getCategoryItems('dorucak')
   const kokteliItems = getCategoryItems('kokteli')
 
   const picaSubgroups = DRINK_SUBGROUPS.map((sg) => ({
@@ -111,11 +109,6 @@ export function getMenuSections(): MenuSectionData[] {
       id: 'kafe',
       title: 'Kafe',
       items: kafeItems,
-    },
-    {
-      id: 'dorucak',
-      title: 'Doručak',
-      items: dorucakItems,
     },
     {
       id: 'slatki-kutak',

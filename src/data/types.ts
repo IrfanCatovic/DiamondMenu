@@ -10,7 +10,6 @@ export type NavId =
   | 'shisha'
   | 'pica'
   | 'kafe'
-  | 'dorucak'
   | 'slatki-kutak'
   | 'kokteli'
   | 'ostalo'

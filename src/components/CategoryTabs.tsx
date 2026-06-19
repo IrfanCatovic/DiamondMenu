@@ -9,7 +9,6 @@ type CategoryTabsProps = {
 const TAB_ICONS: Record<Exclude<NavId, 'shisha'>, string> = {
   pica: 'local_bar',
   kafe: 'coffee',
-  dorucak: 'breakfast_dining',
   'slatki-kutak': 'cake',
   kokteli: 'wine_bar',
   ostalo: 'grid_view',
