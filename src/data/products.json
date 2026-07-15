@@ -119,18 +119,6 @@
       "id": "slatki-kutak",
       "name": "Slatki kutak",
       "items": [
-        { "id": "waffel", "name": "Waffel", "price": 280 },
-        { "id": "americke-palacinke", "name": "Američke palačinke", "price": 280 },
-        {
-          "id": "palacinke-nutela-plazma",
-          "name": "Palačinke Nutela Plazma",
-          "price": 250
-        },
-        {
-          "id": "palacinke-eurokrem-plazma",
-          "name": "Palačinke Eurokrem Plazma",
-          "price": 200
-        },
         { "id": "kolaci", "name": "Kolači", "price": 250 },
         { "id": "biskotino", "name": "Biskotino", "price": 230 },
         { "id": "frappe-milkshake", "name": "Frappe Milkshake", "price": 230 },
